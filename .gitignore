@@ -1,3 +1,10 @@
-a.out
-test.txt
-core
+*.txt
+!*.c
+!*.h
+/fileopt/
+/glibc_file/
+/message_queue/
+/mybash/
+/pipe_opt/
+/process_opt/
+/signal_operation/
