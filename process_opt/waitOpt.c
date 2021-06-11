@@ -3,6 +3,7 @@
 	> Author:Jasonzhu 
 	> Mail: 
 	> Created Time: Wed 26 May 2021 08:04:27 AM CST
+    > description: 获取并打印子进程的状态
  ************************************************************************/
 
 #include <stdio.h>
