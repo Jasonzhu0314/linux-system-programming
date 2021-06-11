@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> pipe
 *
 !*.md
 test.c
@@ -12,4 +16,7 @@ test.c
 !/process_opt/
 !/signal_operation/
 !/standrd_lib/
+<<<<<<< HEAD
 !/pthread_operation
+=======
+>>>>>>> pipe
