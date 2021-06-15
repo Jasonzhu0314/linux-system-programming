@@ -1,25 +1,17 @@
 /*************************************************************************
-	> File Name: pipeOpt.c
+	> File Name: tty_opt.c
 	> Author:Jasonzhu 
-	> Mail: 
-	> Created Time: Sun 30 May 2021 08:03:35 AM CST
+	> Mail: jasonzhu_0314@163.com
+	> Created Time: Wed 09 Jun 2021 08:56:50 PM CST
  ************************************************************************/
 
 #include <stdio.h>
 #include <unistd.h>
-#include <stdlib.h>
 
 int main() {
-    int fd[2];
-    int flag;
 
-    if ((flag = pipe(fd)) == -1) {
-        perror("pipe:");
-        exit(1);
-    }
-
-
-
+    printf("fd %d:%s\n", 0, ttyname(0));
+    printf("fd %d:%s\n", 1, ttyname(1));
+    printf("fd %d:%s\n", 2, ttyname(2));
     return 0;
 }
-
