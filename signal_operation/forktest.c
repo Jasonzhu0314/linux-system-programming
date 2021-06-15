@@ -61,7 +61,8 @@ int main() {
     // sigemptyset(&act.sa_mask);
     // sigaddset(&act.sa_mask, SIGUSR2);
     // sigaction(SIGUSR2, &act, &old_act);
-    //signal(SIGINT, my_handler);
+    signal(SIGINT, my_handler);
+
     cpid = fork();
 
     if (cpid) {
@@ -73,8 +74,10 @@ int main() {
         // //sigaddset(&act.sa_mask, SIGINT);
 
         //sigaction(SIGUSR1, &act1, &old_act1);
+
         //signal(SIGUSR1, my_handler);
         signal(SIGINT, my_handler);
+        signal(SIGUSR1, my_handler);
         //kill(cpid, SIGUSR2);
         //pause();
         //wait(0);
@@ -89,10 +92,18 @@ int main() {
         signal(SIGINT, SigintHandler);
         signal(SIGUSR2, Sigusr1Handler);
 
+        //printf("endi\n");
+
         while(1) {
             printf("endi\n");
             sleep(1);
         };
+
+        // if (pause() == -1) {
+        //     perror("pause:");
+        //     exit(1);
+        // };
+        printf("endi\n");
     }
     return 0;
 }
